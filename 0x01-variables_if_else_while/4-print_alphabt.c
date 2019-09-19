@@ -11,11 +11,11 @@ char letra = 'a';
 char retorno = '\n';
 while (letra <= 'z')
 {
-if (letra != 'q' || letra != 'e')
+if (letra != 'q' && letra != 'e')
 {
 putchar (letra);
-letra++;
 }
+letra++;
 }
 putchar (retorno);
 return (0);
