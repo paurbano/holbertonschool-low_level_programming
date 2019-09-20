@@ -16,9 +16,10 @@ for (i = 48 ; i < 58 ; i++)
 putchar(j);
 putchar(i);
 if (j != 57 || i != 57)
+{
 putchar(44);
-
 putchar(32);
+}
 }
 }
 putchar('\n');
