@@ -11,11 +11,11 @@ int i, j;
 
 for (j = 48 ; j < 58 ; j++)
 {
-for (i = 48 ; i < 58 ; i++)
+for (i = j + 1 ; i < 58 ; i++)
 {
 putchar(j);
 putchar(i);
-if (j != 57 || i != 57)
+if (j != 56 || i != 57)
 {
 putchar(44);
 putchar(32);
