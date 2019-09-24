@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-char *holberton = "Holberton";
+char holberton[] = "Holberton";
 int i;
 for (i = 0; holberton[i] != '\0'; i++)
 {
