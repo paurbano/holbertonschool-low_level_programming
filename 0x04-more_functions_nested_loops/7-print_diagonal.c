@@ -19,7 +19,7 @@ for (j = 1 ; j <= i ; j++)
 if (j == i)
 _putchar('\\');
 else
-_putchar(32);
+_putchar(' ');
 }
 _putchar(retorno);
 }
