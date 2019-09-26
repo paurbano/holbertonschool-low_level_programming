@@ -17,9 +17,9 @@ for (i = 1; i <= n; i++)
 for (j = 1 ; j <= i ; j++)
 {
 if (j == i)
-_putchar(92);
+_putchar('\\');
 else
-_putchar(95);
+_putchar(32);
 }
 _putchar(retorno);
 }
