@@ -3,14 +3,13 @@
  * _strlen - check the code for Holberton School students.
  * @s: parameter
  * Description: returns the length of a string.
- * Return: Always 0.
+ * Return: int.
  */
 
 int _strlen(char *s)
 {
-char str[10];
-int len;
-strcpy(str, s);
-len = strlen(str);
+int len = 0;
+for ( ; *s != '\0' ; s++)
+len = len + 1;
 return (len);
 }
