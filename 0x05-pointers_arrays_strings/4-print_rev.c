@@ -7,13 +7,12 @@
  */
 void print_rev(char *s)
 {
-int i = 0, j;
-for (; *s != '\0' ; s++)
-i++;
+int longitud = 0, inicio;
+while (s[longitud] != '\0')
+longitud++;
 
-for (j = 0; j <= i ; j++)
-_putchar(*(s--));
+for (inicio = longitud - 1 ; inicio >= 0 ; inicio--)
+_putchar(s[inicio]);
 
 _putchar('\n');
-
 }
