@@ -16,8 +16,9 @@ indice = longitud / 2;
 else
 indice = (longitud - 1) / 2;
 
-for ( ; indice <= longitud ; indice++)
+for ( ; indice < longitud ; indice++)
+{
 _putchar(str[indice]);
-
+}
 _putchar('\n');
 }
