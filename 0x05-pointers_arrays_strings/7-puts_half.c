@@ -7,7 +7,7 @@
  */
 void puts_half(char *str)
 {
-  int longitud = 0, indice, i;
+int longitud = 0, indice, i;
 while (str[longitud] != '\0')
 longitud++;
 
@@ -16,7 +16,7 @@ indice = longitud / 2;
 else
 indice = (longitud - 1) / 2;
 
-for (i=longitud - indice ; i < longitud ; i++)
+for (i = longitud - indice ; i < longitud ; i++)
 {
 _putchar(str[i]);
 }
