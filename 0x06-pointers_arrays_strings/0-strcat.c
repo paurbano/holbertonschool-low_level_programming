@@ -12,7 +12,7 @@ char *_strcat(char *dest, char *src)
 char *ptr;
 int longitud = 0;
 
-while (src[longitud] != '\0')
+while (dest[longitud] != '\0')
    longitud++;
 
 ptr = dest + longitud;
