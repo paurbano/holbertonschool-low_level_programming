@@ -9,8 +9,8 @@
 char *_strncat(char *dest, char *src, int n)
 {
 char *ptr;
-int longitud = 0, inicio;
-while (src[longitud] != '\0')
+int longitud = 0;
+while (dest[longitud] != '\0')
 longitud++;
 
 ptr = dest + longitud;
