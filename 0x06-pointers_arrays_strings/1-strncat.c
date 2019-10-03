@@ -1,4 +1,3 @@
-#include <string.h>
 /**
  * _strncat - function is similar to the _strcat function
  * @dest: string destination
@@ -9,7 +8,12 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-char *ptr = dest + strlen(src);
+char *ptr;
+int longitud = 0, inicio;
+while (src[longitud] != '\0')
+longitud++;
+
+ptr = dest + longitud;
 
 while (*src != '\0' && n--)
 *ptr++ = *src++;
