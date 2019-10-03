@@ -1,4 +1,3 @@
-#include <string.h>
 /**
  * _strcat - entry point
  * @dest: string destination
@@ -10,7 +9,14 @@
 char *_strcat(char *dest, char *src)
 {
 
-char *ptr = dest + strlen(dest);
+char *ptr;
+int longitud = 0;
+
+while (src[longitud] != '\0')
+   longitud++;
+
+ptr = dest + longitud;
+
 while (*src != '\0')
 *ptr++ = *src++;
 
