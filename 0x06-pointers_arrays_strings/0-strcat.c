@@ -13,7 +13,7 @@ char *ptr;
 int longitud = 0;
 
 while (dest[longitud] != '\0')
-   longitud++;
+longitud++;
 
 ptr = dest + longitud;
 
