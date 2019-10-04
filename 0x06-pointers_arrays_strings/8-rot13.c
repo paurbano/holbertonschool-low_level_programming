@@ -6,29 +6,17 @@
  */
 char *rot13(char *s)
 {
-int i;
-char caracter;
+char abc[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+int i, j;
 
 for (i = 0; s[i] != '\0' ; i++)
 {
-caracter = s[i];
-if (caracter >= 'A' && caracter < 'N')
+for (j = 0; abc[j] != '\0' ; j++)
 {
-caracter += 13;
+if (s[i] == abc[j])
+s[i] = rot[j];
 }
-else if (caracter >= 'N' && caracter <= 'Z')
-{
-caracter -= 13;
-}
-else if (caracter >= 'a' && caracter < 'n')
-{
-caracter += 13;
-}
-else if (caracter >= 'n' && caracter <= 'z')
-{
-caracter -= 13;
-}
-s[i] = caracter;
 }
 return (s);
 }
