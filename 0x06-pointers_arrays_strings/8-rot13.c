@@ -16,6 +16,7 @@ for (j = 0; abc[j] != '\0' ; j++)
 {
 if (s[i] == abc[j])
 s[i] = rot[j];
+break;
 }
 }
 return (s);
