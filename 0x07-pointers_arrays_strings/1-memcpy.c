@@ -1,7 +1,7 @@
 /**
  * _memcpy - function that copies memory area.
- * @s: array of char
- * @b: char
+ * @dest: array of char
+ * @src: char
  * @n: int
  * Description:  function that function that copies memory area.
  * Return: char string
