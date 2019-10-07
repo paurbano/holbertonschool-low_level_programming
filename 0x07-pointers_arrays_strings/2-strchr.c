@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
 * _strchr - function that locates a character in a string.
 * @s: array of char
@@ -8,9 +9,19 @@
 char *_strchr(char *s, char c)
 {
 
-for ( ; *s != '\0' ; s++)
-if (*s == c)
-break;
+int found = 0;
 
+for ( ; *s != '\0' ; s++)
+{
+if (*s == c)
+{
+found = 1;
+break;
+}
+}
+
+if (found == 1)
 return (s);
+
+return (NULL);
 }
