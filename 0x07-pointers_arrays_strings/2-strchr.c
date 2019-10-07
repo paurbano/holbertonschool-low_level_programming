@@ -20,8 +20,11 @@ break;
 }
 }
 
-if (found == 1)
+if (*s == '\0')
 return (s);
 
+if (found == 1)
+return (s);
+else
 return (NULL);
 }
