@@ -9,22 +9,17 @@
 char *_strchr(char *s, char c)
 {
 
-int found = 0;
 
 for ( ; *s != '\0' ; s++)
 {
 if (*s == c)
 {
-found = 1;
-break;
+return (s);
 }
 }
 
-if (*s == '\0')
+if (*s == c)
 return (s);
 
-if (found == 1)
-return (s);
-else
 return (NULL);
 }
