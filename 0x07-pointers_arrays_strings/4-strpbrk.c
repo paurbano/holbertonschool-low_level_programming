@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * _strpbrk - encodes a string using rot13.
  * @s: array of char
@@ -14,9 +15,7 @@ for (; *s != '\0' ; s++)
 for (j = 0; accept[j] != '\0' ; j++)
 {
 if (*s == accept[j])
-{
 return (s);
-}
 }
 }
 return (NULL);
