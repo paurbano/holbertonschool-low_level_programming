@@ -12,13 +12,13 @@ int multiplica = 0;
 
 if (argc <= 2)
 {
-printf("Error \n");
+printf("Error\n");
 return (1);
 }
 else
 {
 multiplica = atoi(argv[1]) * atoi(argv[2]);
 printf("%d\n", multiplica);
-}
 return (0);
+}
 }
