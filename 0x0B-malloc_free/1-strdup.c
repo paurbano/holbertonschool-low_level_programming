@@ -14,9 +14,9 @@ if (str ==  NULL)
 return (NULL);
 
 for (i = 0; str[i] != '\0' ; i++)
-len++;
+;
 
-ptrStr =  malloc(len *sizeof(char));
+ptrStr =  malloc(i * sizeof(char));
 
 if (ptrStr == NULL)
 return (NULL);
@@ -24,5 +24,6 @@ return (NULL);
 for (i = 0; str[i] != '\0' ; i++)
 ptrStr[i] = str[i];
 
+ptrStr[i] = '\0';
 return (ptrStr);
 }
