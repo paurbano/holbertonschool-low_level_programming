@@ -16,7 +16,7 @@ return (NULL);
 for (i = 0; str[i] != '\0' ; i++)
 ;
 
-ptrStr =  malloc(i * sizeof(char));
+ptrStr =  malloc((i + 1) * sizeof(char));
 
 if (ptrStr == NULL)
 return (NULL);
