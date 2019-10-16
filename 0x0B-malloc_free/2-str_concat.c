@@ -20,10 +20,10 @@ s1 = "";
 if (s2 == NULL)
 s2 = "";
 
-for (i = 0, ; s1[i] != '\0' ; i++)
+for (i = 0 ; s1[i] != '\0' ; i++)
 lenCad++;
 
-for (i = 0, ; s2[i] != '\0' ; i++)
+for (i = 0 ; s2[i] != '\0' ; i++)
 lenCad++;
 
 ptrStr =  malloc((lenCad + 1) * sizeof(char));
