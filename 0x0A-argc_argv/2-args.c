@@ -8,9 +8,16 @@
  */
 int main(int argc, char *argv[])
 {
-int i;
-for (i = 0 ; i < argc ; i++)
-printf("%s\n", argv[i]);
+  int multiplica = 0;
 
-return (0);
-}
+  if (argc <= 2)
+    {
+      printf("Error \n");
+      return (1);
+    }
+  else{
+    multiplica = atoi(argv[1]) * atoi(argv[2]);
+    printf("%s\n", multiplica);
+  }
+  return (0);
+ }
