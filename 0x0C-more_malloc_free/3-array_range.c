@@ -21,7 +21,7 @@ array = malloc(sizeof(int) * (max - min + 1));
 if (array == NULL)
 return (NULL);
 
- for (indice = 0 ; indice <= max ; indice++, min++)
+for ( ; min <= max ; indice++, min++)
 array[indice] = min;
 
 return (array);
