@@ -27,7 +27,7 @@ p = ptr;
 /*tamaño del nuevo puntero*/
 nptr = malloc(new_size);
 if (nptr == NULL)
-return (NULL);
+return (ptr);
 
 if (ptr == NULL)
 return (NULL);
