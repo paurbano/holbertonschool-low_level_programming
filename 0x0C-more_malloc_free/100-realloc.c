@@ -30,7 +30,7 @@ if (nptr == NULL)
 return (NULL);
 
 if (ptr == NULL)
-return (nptr);
+return (NULL);
 
 if (new_size > old_size)
 {
