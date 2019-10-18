@@ -24,21 +24,23 @@ lenS1++;
 while (s2[lenS2] != '\0')
 lenS2++;
 
-if (n < lenS2)
-lenS2 = n;
+if (n >= lenS2)
+n = lenS2;
 
-size = lenS1 + lenS2 + 1;
+size = lenS1 + n + 1;
 
-ptrConcat = malloc(sizeof(char *) * size);
+ptrConcat = malloc(sizeof(char) * size);
 
 if (ptrConcat == NULL)
 return (NULL);
 
 for (; indice < size - 1 ; indice++)
+{
 if (*s1 != '\0')
 ptrConcat[indice] = *(s1++);
 else
 ptrConcat[indice] = *(s2++);
+}
 
 ptrConcat[indice] = '\0';
 
