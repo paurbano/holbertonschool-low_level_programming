@@ -20,17 +20,17 @@ if (new_size == 0 && ptr != NULL)
 free(ptr);
 return (NULL);
 }
+else if (ptr == NULL && old_size != 0)
+new_size = old_size;
 
-/*darle tipo al puntero generico que se pasa como parámetro*/
 p = ptr;
 
-/*tamaño del nuevo puntero*/
 nptr = malloc(new_size);
 if (nptr == NULL)
-return (ptr);
+return (NULL);
 
 if (ptr == NULL)
-return (NULL);
+return (nptr);
 
 if (new_size > old_size)
 {
