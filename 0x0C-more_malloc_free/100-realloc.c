@@ -29,7 +29,7 @@ nptr = malloc(new_size);
 if (nptr == NULL)
 return (NULL);
 
-if (ptr == NULL)
+if (p == NULL)
 return (nptr);
 
 if (new_size > old_size)
@@ -42,6 +42,6 @@ else
 for (c = 0 ; c < new_size ; c++)
 nptr[c] = p[c];
 }
-free(ptr);
+free(p);
 return (nptr);
 }
