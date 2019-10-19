@@ -1,15 +1,15 @@
 #include <stdlib.h>
 /**
- * _realloc -  function that creates an array of integers.
+ * _realloc - function that creates an array of integers.
  * @ptr: number of elements
- * @old_size:old size of element
+ * @old_size: old size of element
  * @new_size: new size to assig
- * Description: f function that creates an array of integers.
+ * Description: function that creates an array of integers.
  * Return: pointer with new size
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-int *nptr, *p;
+char *nptr, *p;
 unsigned int c;
 
 if (old_size == new_size)
@@ -24,8 +24,8 @@ else if (ptr == NULL && old_size != 0)
 new_size = old_size;
 
 p = ptr;
+nptr = malloc(sizeof(char) * new_size);
 
-nptr = malloc(new_size);
 if (nptr == NULL)
 return (NULL);
 
