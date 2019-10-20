@@ -8,9 +8,9 @@
  * Return: int
  */
 
-int compara(const char *H, const char *N)
+int compara(char *H, char *N)
 {
-while (*H && *N)
+while (*H != '\0' && *N != '\0')
 {
 if (*H != *N)
 return (0);
@@ -18,8 +18,7 @@ return (0);
 H++;
 N++;
 }
-
-return (*N == '\0');
+return (1);
 }
 
 /**
@@ -32,10 +31,20 @@ return (*N == '\0');
 
 char *_strstr(char *haystack, char *needle)
 {
+
+if (haystack == NULL || needle == NULL)
+return (NULL);
+
+if (*needle == '\0')
+return (haystack);
+
 while (*haystack != '\0')
 {
-if ((*haystack == *needle) && compara(haystack, needle))
+if (*haystack == needle[0])
+{
+if (compara(haystack, needle))
 return (haystack);
+}
 haystack++;
 }
 
