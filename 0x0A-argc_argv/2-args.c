@@ -1,23 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - check the code for Holberton School students.
+ * main - print all arguments receives
  * @argc : argc contains the number of arguments passed to the program
  * @argv : A vector is a one-dimensional array
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
-  int multiplica = 0;
+  int i = 0;
 
-  if (argc <= 2)
-    {
-      printf("Error \n");
-      return (1);
-    }
-  else{
-    multiplica = atoi(argv[1]) * atoi(argv[2]);
-    printf("%s\n", multiplica);
-  }
+  for ( ; i < argc ; i++)
+  printf("%s\n", argv[i]);
+  
   return (0);
- }
+}
