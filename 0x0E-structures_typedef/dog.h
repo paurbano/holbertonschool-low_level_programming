@@ -7,10 +7,11 @@
  * @owner: propiedad
  * Description: returns the natural square root of a number.
  */
-typedef struct dog {
+typedef struct dog
+{
 char *name;
 float age;
-char* owner;
+char *owner;
 } dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
