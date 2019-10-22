@@ -44,7 +44,7 @@ free(perro);
 return (NULL);
 }
 
-for (i = 0 ; i < lonName ; i++)
+for (i = 0 ; i < lonOwner ; i++)
 perro->owner[i] = owner[i];
 
 return (perro);
