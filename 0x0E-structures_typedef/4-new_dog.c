@@ -23,24 +23,26 @@ for ( ; owner[lonOwner] != '\0' ; lonOwner++)
 perro->name = malloc(sizeof(char) * (lonName + 1));
 if (perro->name == NULL)
 {
-free(perro->name);
 free(perro);
 return (NULL);
 }
-
 for (i = 0 ; i < lonName ; i++)
 perro->name[i] = name[i];
+
 perro->name[i] = '\0';
+
 perro->age = age;
 perro->owner = malloc(sizeof(char) * (lonOwner + 1));
 if (perro->owner == NULL)
 {
-free(perro->owner);
+free(perro->name);
 free(perro);
 return (NULL);
 }
 for (i = 0 ; i < lonOwner ; i++)
 perro->owner[i] = owner[i];
+
 perro->owner[i] = '\0';
+
 return (perro);
 }
