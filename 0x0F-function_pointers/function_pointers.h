@@ -1,5 +1,6 @@
 #ifndef HEADER_FILE
-#include <stdio.h>
+#define HEADER_FILE
+#include <stdlib.h>
 #include <stddef.h>
 int _putchar(char c);
 void print_name(char *name, void (*f)(char *));
