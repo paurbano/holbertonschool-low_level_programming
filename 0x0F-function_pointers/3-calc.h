@@ -2,6 +2,7 @@
 #define HEADER_FILE
 #include <stdio.h>
 #include <string.h>
+#include "function_pointers.h"
 /**
  * struct op - Struct op
  *
