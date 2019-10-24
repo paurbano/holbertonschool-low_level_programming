@@ -3,11 +3,11 @@
 #include <stdlib.h>
 #include "3-calc.h"
 /**
- * main - launch the app
- * @argv: char
- * @argc: int
- * Return: int
- */
+* main - launch the app
+* @argv: char
+* @argc: int
+* Return: int
+*/
 int main(int argc, char *argv[])
 {
 int (*f)(int, int);
