@@ -13,7 +13,7 @@ va_list parameters;
 va_start(parameters, n);
 
 if (separator == NULL)
-return;
+separator = "  ";
 
 for (i = 0 ; i < n ; i++)
 {
