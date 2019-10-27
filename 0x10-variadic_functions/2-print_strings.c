@@ -23,7 +23,7 @@ cad = "(nil)";
 
 printf("%s", cad);
 
-if (separator != NULL && i != n)
+if (separator != NULL && i != (n - 1))
 printf("%s", separator);
 }
 va_end(parameters);
