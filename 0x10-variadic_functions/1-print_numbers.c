@@ -8,17 +8,18 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-  unsigned int i;
-  va_list parameters;
-  va_start (parameters, n);
-   
-  for (i = 0 ; i < n ; i++)
-    {
-      printf("%d",va_arg (parameters, int));
-      if (separator != NULL && i != n)
-	printf("%s",separator);
-      
-    }
-  va_end(parameters);
-  printf("\n");
+unsigned int i;
+va_list parameters;
+va_start(parameters, n);
+
+for (i = 0 ; i < n ; i++)
+{
+printf("%d", va_arg(parameters, int));
+if (separator == NULL)
+separator = " ";
+if (i != n)
+printf("%s", separator);
+}
+va_end(parameters);
+printf("\n");
 }
