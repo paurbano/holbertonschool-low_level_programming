@@ -12,11 +12,13 @@ unsigned int i;
 va_list parameters;
 va_start(parameters, n);
 
+if (separator == NULL)
+return;
+
 for (i = 0 ; i < n ; i++)
 {
 printf("%d", va_arg(parameters, int));
-if (separator == NULL)
-separator = " ";
+
 if (i != n)
 printf("%s", separator);
 }
