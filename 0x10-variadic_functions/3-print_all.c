@@ -39,9 +39,9 @@ default:
 other = 1;
 break;
 }
-cont++;
-if (*(format + cont + 1) != '\0' && other == 0)
+if (format[cont + 1] != '\0' && other != 1)
 printf(", ");
+cont++;
 }
 va_end(parameters);
 printf("\n");
