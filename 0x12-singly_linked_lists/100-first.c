@@ -1,11 +1,12 @@
 #include <stdio.h>
 /**
- * _start - execute before main
+ * __start - execute before main
  * Description: execute before main
  * Return: Nothing
  */
-void _start(void) __attribute__((constructor));
-void _start(void) __attribute__((constructor))
+void __start(void) __attribute__((constructor));
+
+void __start(void)
 {
 printf("You're beat! and yet, you must allow,\n");
 printf("I bore my house upon my back!\n");
