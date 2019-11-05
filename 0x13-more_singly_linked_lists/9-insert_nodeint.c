@@ -22,6 +22,12 @@ return (NULL);
 
 node->n = n;
 node->next = NULL;
+if (idx == 0)
+{
+node->next = *head;
+*head = node;
+return (*head);
+}
 while ((*head) != NULL)
 {
 if ((idx - 1) == cont)
