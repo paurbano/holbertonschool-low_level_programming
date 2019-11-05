@@ -19,5 +19,5 @@ free(anterior);
 anterior = *head;
 }
 
-/*head = NULL;*/
+*head = NULL;
 }
