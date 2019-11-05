@@ -14,7 +14,7 @@ int n;
 if (head == NULL)
 return (0);
 
-n = temp->n;
+n = (*head)->n;
 (*head) = (*head)->next;
 free(temp);
 return (n);
