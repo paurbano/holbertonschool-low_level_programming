@@ -28,17 +28,17 @@ node->next = *head;
 *head = node;
 return (node);
 }
-while ((*head) != NULL)
+
+while (actual != NULL)
 {
-if ((idx) == cont)
+if (idx == cont)
 {
-node->next = (*head)->next;
-(*head)->next = node;
-(*head) = actual;
+node->next = actual->next;
+actual->next = node;
 return (node);
 }
 cont++;
-*head = (*head)->next;
+actual = actual->next;
 }
 return (NULL);
 }
