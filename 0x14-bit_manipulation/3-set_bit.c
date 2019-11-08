@@ -8,10 +8,11 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
+int mask = 0;
 if (index > 64)
 return (-1);
 
-int mask = 1 << index;
+mask = 1 << index;
 *n = (*n & ~mask) | ((1 << index) & mask);
 return (1);
 }
