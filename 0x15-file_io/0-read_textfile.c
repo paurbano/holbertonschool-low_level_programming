@@ -17,7 +17,7 @@ return (0);
 if (letters <= 0)
 return (0);
 
-buffer = malloc(sizeof(size_t) * letters + 1);
+buffer = malloc(sizeof(size_t) * letters);
 
 if (buffer == NULL)
 return (0);
@@ -36,14 +36,11 @@ r = 0;
 else
 r = rd;
 
-buffer[rd] = '\0';
-
 wr = write(STDOUT_FILENO, buffer, rd);
 
 if (wr == -1)
 r = 0;
-else
-r = wr;
+
 
 close(file);
 free(buffer);
