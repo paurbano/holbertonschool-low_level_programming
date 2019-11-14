@@ -26,7 +26,7 @@ for (alto = 0 ; alto <  height ; alto++)
 ptrMatriz[alto] = malloc(width * sizeof(int));
 if (ptrMatriz[alto] == NULL)
 {
-for ( ; alto >= 0 ; alto++)
+for ( ; alto >= 0 ; alto--)
 free(ptrMatriz[alto]);
 free(ptrMatriz);
 return (NULL);
