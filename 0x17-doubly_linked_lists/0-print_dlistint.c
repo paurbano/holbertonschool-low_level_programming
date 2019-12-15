@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * print_dlistint - prints all the elements of a double list
  * @h: list
@@ -17,7 +18,7 @@ size_t print_dlistint(const dlistint_t *h)
 	{
 		while (h != NULL)
 		{
-			printf("%d \n", h->n);
+			printf("%d\n", h->n);
 			numNodes++;
 			h = h->next;
 		}
@@ -26,7 +27,7 @@ size_t print_dlistint(const dlistint_t *h)
 	{
 		while (h != NULL)
 		{
-			printf("%d \n", h->n);
+			printf("%d\n", h->n);
 			numNodes++;
 			h = h->prev;
 		}
