@@ -18,13 +18,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);/*get index according key*/
 	actual = ht->array[index];/*step into element of array with index*/
+	/*go throw list to find if there is a collision*/
 	while (actual != NULL)
 	{
 		if (strcmp(actual->key, key) == 0) /*compare key to find it*/
 		{
 			/*if founded free to update it and return successfully*/
 			free(actual->value);
-			actual->value =strdup(value);
+			actual->value = strdup(value);
 			return (1);
 		}
 		actual = actual->next;
