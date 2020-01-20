@@ -8,28 +8,27 @@ void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *actual;
 	unsigned long int index, size;
+	int flag = 0;
 
 	if (ht == NULL || ht->size == 0)
-	{
-		printf("{}\n");
 		return;
-	}
 
 	size = ht->size;
 	printf("{");
+/*go through all array*/
 	for (index = 0 ; index < size ; index++)
 	{
-
 		/*step into element of array with index*/
 		actual = ht->array[index];
 
 		/*go through list to find key*/
 		while (actual != NULL)
 		{
-			printf("'%s': '%s'", actual->key, actual->value);
 			/*print pair {key: value}*/
-			if (actual->next)
+			if (flag)
 				printf(", ");
+			printf("'%s': '%s'", actual->key, actual->value);
+			flag = 1;
 			actual = actual->next;
 		}
 	}
