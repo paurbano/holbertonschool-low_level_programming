@@ -4,17 +4,22 @@
 
 def island_perimeter(grid):
     perimeter = 0
-    filas = len(grid)
-    columnas = len(grid[0])
-    for fila in range(filas):
-        for columna in range(columnas):
-            if grid[fila][columna]:
-                if (fila - 1 < 0 or grid[fila - 1][columna] == 0):
+    rows = len(grid)
+    columns = len(grid[0])
+    for row in range(rows):
+        for column in range(columns):
+            # only if Cell has value
+            if grid[row][column]:
+                # if it's first row or previous cell in that row is water
+                if (row - 1 < 0 or grid[row - 1][column] == 0):
                     perimeter += 1
-                if (fila + 1 >= filas or grid[fila + 1][columna] == 0):
+                # if it's last row or next cell in that row is water
+                if (row + 1 >= rows or grid[row + 1][column] == 0):
                     perimeter += 1
-                if (columna - 1 < 0 or grid[fila][columna - 1] == 0):
+                # if first column or previous cell in that column is water
+                if (column - 1 < 0 or grid[row][column - 1] == 0):
                     perimeter += 1
-                if (columna + 1 >= columnas or grid[fila][columna + 1] == 0):
+                # if last column or next cell in that column is water
+                if (column + 1 >= columns or grid[row][column + 1] == 0):
                     perimeter += 1
     return perimeter
