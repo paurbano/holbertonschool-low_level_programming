@@ -32,6 +32,7 @@ Write a function that searches for a value in an array of integers using the Lin
 * If value is not present in array or if array is NULL, your function must return -1
 * Every time you compare a value in the array to the value you are searching, you have to print this value (see example below)
 
+Example:
 
     wilfried@0x1E-search_algorithms$ cat 0-main.c 
     #include <stdio.h>
@@ -95,6 +96,7 @@ Write a function that searches for a value in a sorted array of integers using t
 * If value is not present in array or if array is NULL, your function must return -1
 * You must print the array being searched every time it changes. (e.g. at the beginning and when you search a subarray) (See example)
 
+Example:
 
     wilfried@0x1E-search_algorithms$ cat 1-main.c 
     #include <stdio.h>
@@ -146,6 +148,33 @@ Repo:
 * GitHub repository: holbertonschool-low_level_programming
 * Directory: 0x1E-search_algorithms
 * File: 2-O
+
+ ## 3. Big O #1
+ What is the space complexity (worst case) of an iterative linear search algorithm in an array of size n?
+
+ ## 4. Big O #2
+ What is the time complexity (worst case) of a binary search in an array of size n?
+
+ ## 5. Big O #3
+ What is the space complexity (worst case) of a binary search in an array of size n?
+
+ ## 6. Big O #4
+ What is the space complexity of this function / algorithm?
+
+    int **allocate_map(int n, int m)
+    {
+        int **map;
+
+        map = malloc(sizeof(int *) * n);
+        for (size_t i = 0; i < n; i++)
+        {
+            map[i] = malloc(sizeof(int) * m);
+        }
+        return (map);
+    }
+
+## 8. Big O #5
+What is the time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)?
 
 ## AUTHOR
 Pablo Andres Urbano - 1283@holbertonshool.com
